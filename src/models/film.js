@@ -20,7 +20,14 @@ Film.prototype.bindEvents = function () {
     const ratingRange = event.detail;
     this.checkRating(ratingRange)
   });
-}
+
+  PubSub.subscribe("SearchView:search-input", (event) => {
+      const searchInput = event.detail;
+      console.log('Film:search-input', event.detail);
+      const searchResult = this.films.filter(film => film.title.includes(searchInput))
+      PubSub.publish('Film:films-ready', searchResult)
+    });
+  }
 
 Film.prototype.checkRating = function (ratingRange) {
   let filmsByRatings
@@ -38,18 +45,6 @@ Film.prototype.checkRating = function (ratingRange) {
   }
   PubSub.publish('Film:films-ready', filmsByRatings)
 };
-
-// search function
-Film.prototype.searchByFilm = function () {
-  PubSub.subscribe("SearchView:search-input", (event) => {
-    const searchInput = event.detail;
-    console.log('Film:search-input', event.detail);
-    const searchResult = this.films.filter(film => film.title.includes("searchInput"))
-  PubSub.publish('Film:films-ready', searchResult)
-});
-}
-
-
 
 
 module.exports = Film;

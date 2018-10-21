@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const film = new Film();
   film.bindEvents();
-  film.searchByFilm();
   film.getData();
 
 
