@@ -1,0 +1,8 @@
+
+div.image-header {
+   width:90%; /*width of your image*/
+   height:150px; /*height of your image*/
+   background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnWT5xFDCHtAGK2NV3DIHN_JqsWFlCmjMB3othPi2WxHpkFroY');
+   margin:0; /* If you want no margin */
+   padding:0; /*if your want to padding */
+}
