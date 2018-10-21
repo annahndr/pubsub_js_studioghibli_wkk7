@@ -5,8 +5,13 @@ const FilmView = require('./film_view.js');
 const ListView = function(element) {
   this.element = element
   this.images = [
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBtFk2wqfdnU0RStATvchA0lyEFe1DLKwTdhYXS5iHEXA8ieIF","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEaTlR3LSnlpyqT06a3Qqx5FKyANA0qhkurW5eSkVsHOQqeOxd","https://i.kinja-img.com/gawker-media/image/upload/s--ihgTRrg9--/c_scale,f_auto,fl_progressive,q_80,w_800/wxyubkjmeppxmqasllft.jpg",
-  "https://vignette.wikia.nocookie.net/b5bf347c-245d-4bcb-8f68-829fa3d911e8/scale-to-width-down/800"
+  "../public/images/howls_moving_castle.jpg",
+  "../public/images/ponyo.jpg",
+  "../public/images/arrietty.jpg",
+  "../public/images/totoro.jpeg",
+  "../public/images/grave_fireflies.jpg",
+  "../public/images/castle_sky.jpg",
+  "../public/images/kiki.jpg"
 ]
 };
 
@@ -47,7 +52,7 @@ setInterval(function() {
       if (i == images.length) {
         i =  0;
       }
-}, 3000);
+}, 9000);
 };
 
 

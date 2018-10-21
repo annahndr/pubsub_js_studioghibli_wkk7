@@ -24,7 +24,7 @@ Film.prototype.bindEvents = function () {
   PubSub.subscribe("SearchView:search-input", (event) => {
       const searchInput = event.detail;
       console.log('Film:search-input', event.detail);
-      const searchResult = this.films.filter(film => film.title.includes(searchInput))
+      const searchResult = this.films.filter(film => film.title.toLowerCase().includes(searchInput))
       PubSub.publish('Film:films-ready', searchResult)
     });
   }
@@ -40,8 +40,11 @@ Film.prototype.checkRating = function (ratingRange) {
   else if(ratingRange == "71-80"){
     filmsByRatings = this.films.filter(film => film.rt_score >=71 && film.rt_score <=80)
   }
-  else {
+  else if(ratingRange == "1-70"){
     filmsByRatings = this.films.filter(film => film.rt_score >=1 && film.rt_score <=70)
+  }
+  else {
+    filmsByRatings = this.films
   }
   PubSub.publish('Film:films-ready', filmsByRatings)
 };

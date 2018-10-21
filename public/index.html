@@ -6,42 +6,35 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="js/bundle.js"></script>
   <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
   <title>StudioGhibliFilms</title>
 </head>
 <body>
-  <div class="image-header">
-  &nbsp;
-  </div>
+  <div id="content">
   <div id="intro">
-    <h2>STUDIO GHIBLI FILMS</h2>
+    <h1>STUDIO GHIBLI</h1>
     <p>Studio Ghibli is a Japanese animation studio, founded by Hayau Miyazaki, reknowned for its anime children's films.</p>
-
-    <!-- <form id ="film-filter" >
-      <label for="film-dropdown">Select a film:</label>
-      <select id="film-dropdown" name="film-dropdown">
-
-      </select>
-    </form> -->
-
     <form id ="rating-filter" >
       <label for="rating-dropdown">Select films by rating:</label>
       <select id="rating-dropdown" name="rating-dropdown">
-
-      <option value="91-100">91-100pts</option>
-      <option value="81-90">81-90pts</option>
-      <option value="71-80">71-80pts</option>
-      <option value="51-70">1-70pts</option>
+        <option value="91-100">91-100pts</option>
+        <option value="81-90">81-90pts</option>
+        <option value="71-80">71-80pts</option>
+        <option value="1-70">1-70pts</option>
+        <option value="all-films">all films</option>
       </select>
-
     </form>
-    <br>
+    <!-- search bar -->
     <input type="text" id="searchInput" placeholder="Search by film title..">
-
+    <!-- Images -->
+    <div class="image-header">
+    &nbsp;
+    </div>
   </div>
 
   <div id="list-of-films">
 
   </div>
-
+</div>
 </body>
 </html>
